@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.hw2.CTScanTechController" spacing="10" alignment="TOP_LEFT">
+    <padding>
+        <Insets top="20" left="20" right="20" bottom="20"/>
+    </padding>
+
+    <Label text="CT Scan Technician View" style="-fx-font-size: 20;" />
+
+    <Label text="Patient ID:"/>
+    <TextField fx:id="patientIdField"/>
+
+    <Label text="Total Agatston CAC Score:"/>
+    <TextField fx:id="totalScoreField"/>
+
+    <Label text="Vessel level Agatston CAC scores:"/>
+    <HBox spacing="10">
+        <Label text="LM:"/>
+        <TextField fx:id="lmField" prefWidth="60"/>
+        <Label text="LAD:"/>
+        <TextField fx:id="ladField" prefWidth="60"/>
+        <Label text="LCX:"/>
+        <TextField fx:id="lcxField" prefWidth="60"/>
+        <Label text="RCA:"/>
+        <TextField fx:id="rcaField" prefWidth="60"/>
+        <Label text="PDA:"/>
+        <TextField fx:id="pdaField" prefWidth="60"/>
+    </HBox>
+
+    <Button text="Save" onAction="#onSaveCTScan"/>
+    <Button text="Back" onAction="#onBackButtonClick"/>
+</VBox>

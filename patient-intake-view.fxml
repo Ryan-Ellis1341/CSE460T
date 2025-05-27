@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.hw2.PatientIntakeController">
+
+    <Label text="Patient Intake Form" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="firstNameField" promptText="First Name"/>
+    <TextField fx:id="lastNameField" promptText="Last Name"/>
+    <TextField fx:id="emailField" promptText="Email"/>
+    <TextField fx:id="phoneField" promptText="Phone Number"/>
+    <TextArea fx:id="healthHistoryArea" promptText="Health History"/>
+    <TextField fx:id="insuranceField" promptText="Insurance ID"/>
+
+    <Button text="Submit" onAction="#onSubmitForm"/>
+    <Label fx:id="confirmationLabel" text=""/>
+
+    <Pane VBox.vgrow="ALWAYS"/>
+    <HBox alignment="BOTTOM_LEFT" spacing="10">
+        <Button text="Back" onAction="#onBackButtonClick"/>
+    </HBox>
+</VBox>

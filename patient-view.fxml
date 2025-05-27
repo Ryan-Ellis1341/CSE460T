@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.hw2.PatientViewController" spacing="10" alignment="TOP_LEFT">
+    <padding>
+        <Insets top="20" left="20" right="20" bottom="20"/>
+    </padding>
+
+    <Label text="Patient View" style="-fx-font-size: 20;" />
+
+    <Label text="Enter Patient ID:"/>
+    <TextField fx:id="patientIdField" />
+
+    <Button text="Load Report" onAction="#onLoadReport"/>
+
+    <Label fx:id="greetingLabel" style="-fx-font-size: 16;" />
+
+    <Label text="Total Agatston CAC Score:"/>
+    <TextField fx:id="totalScoreField" editable="false" />
+
+    <HBox spacing="10">
+        <Label text="LM:"/>
+        <TextField fx:id="lmField" editable="false" prefWidth="60"/>
+        <Label text="LAD:"/>
+        <TextField fx:id="ladField" editable="false" prefWidth="60"/>
+        <Label text="LCX:"/>
+        <TextField fx:id="lcxField" editable="false" prefWidth="60"/>
+        <Label text="RCA:"/>
+        <TextField fx:id="rcaField" editable="false" prefWidth="60"/>
+        <Label text="PDA:"/>
+        <TextField fx:id="pdaField" editable="false" prefWidth="60"/>
+    </HBox>
+
+    <Label fx:id="messageLabel" textFill="red" />
+
+    <Button text="Back" onAction="#onBackButtonClick"/>
+</VBox>
